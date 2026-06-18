@@ -7,7 +7,7 @@
 ## Abstract
 
 <div align='justify'> 
-Somatic variant calling algorithms are essential for detecting genomic alterations. However, evaluating their performance can be challenging due to the lack of high-quality ground truth datasets. To address this issue, we developed a synthetic genomics data generation framework for benchmarking tumor-only somatic variant calling algorithms. We generated synthetic datasets using the NEAT simulator. Subsequently, we thoroughly evaluated the performance of variant calling algorithms including <strong>GATK-Mutect2, FreeBayes, VarDict, VarScan2 and LoFreq</strong> on these datasets, comparing results against the ground truth. Synthetic datasets provide an excellent ground truth for studying the performance and behavior of somatic variant calling algorithms.
+<b>Synth4bench</b> is an open-source framework for benchmarking tumor-only somatic variant calling algorithms using synthetic next-generation sequencing data with known ground truth. Built on the <b>NEAT</b> simulator, it generates controlled synthetic datasets and provides a reproducible end-to-end pipeline for data generation, preprocessing, variant calling and performance evaluation. The framework supports <b>Mutect2</b>, <b>FreeBayes</b>, <b>LoFreq</b>, <b>VarDict</b> and <b>VarScan2</b>, enabling systematic comparison across different sequencing conditions. By combining controlled low-allele-frequency variant generation with comprehensive benchmarking metrics, synth4bench offers a flexible and extensible platform for studying variant caller performance and improving benchmarking practices in genomics.
 </div>
 
 ---
@@ -33,11 +33,14 @@ Somatic variant calling algorithms are essential for detecting genomic alteratio
 </p>
 
 <div align='justify'>
-Our framekwork addresses the challenge of variant calling, particularly for low-alle frequency variants (≤10%). The goal is to develop a reliable and consistent method for identifying genetic lesions in cancer-associated genomic alterations. The lack of ground truth datasets complicates benchmarking and evaluation. To overcome this, our framework includes:
+Synth4bench addresses the challenge of benchmarking tumor-only somatic variant callers, particularly for low-allele-frequency (≤10%) variants, by providing synthetic datasets with known ground truth. The framework includes:
 
-1. **Synthetic Data Generation:** Using the NEAT v3.3 simulator, we generate synthetic genomics data that mimics real genome sequences, serving as a ground truth.
-2. **Identifying three independent analyses**: to adress three variant types independently: SNVs true variants, SNVs noise and indels.
-3. **Benchmarking Variant Callers:** We evaluate five somatic variant callers, GATK-Mutect2, Freebayes, VarDict, VarScan2, and LoFreq — using these synthetic datasets.
+1. Synthetic data generation using the NEAT simulator to create controlled, reproducible NGS datasets.
+2. Three independent benchmarking analyses for SNV true variants, SNV noise and small indels.
+3. Comprehensive benchmarking of five widely used variant callers: Mutect2, FreeBayes, LoFreq, VarDict and VarScan2.
+4. Standardized performance evaluation using metrics such as Precision, Recall, allele frequency estimation (ΔAF), and detailed indel classification.
+
+Synth4bench provides a reproducible and extensible platform for studying variant caller behavior and benchmarking new methods under controlled sequencing conditions.
 </div>
 
 ---
