@@ -38,7 +38,7 @@ Synth4bench addresses the challenge of benchmarking tumor-only somatic variant c
 1. Synthetic data generation using the NEAT simulator to create controlled, reproducible NGS datasets.
 2. Three independent benchmarking analyses for SNV true variants, SNV noise and small indels.
 3. Comprehensive benchmarking of five widely used variant callers: Mutect2, FreeBayes, LoFreq, VarDict and VarScan2.
-4. Standardized performance evaluation using metrics such as Precision, Recall, allele frequency estimation (ΔAF), and detailed indel classification.
+4. Systematic performance evaluation using metrics such as Precision, Recall, allele frequency estimation (ΔAF), and detailed indel classification.
 
 Synth4bench provides a reproducible and extensible platform for studying variant caller behavior and benchmarking new methods under controlled sequencing conditions.
 </div>
